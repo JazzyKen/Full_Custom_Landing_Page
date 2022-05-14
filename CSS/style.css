@@ -1,0 +1,102 @@
+/*
+ * Research for various aspects of JavaScript syntax and functionality was performed within the following websites
+ * MDN Web Docs - https://developer.mozilla.org/en-US/
+ * W3 Schools - https://www.w3schools.com/
+ * No part of this project was plaigarized. I resent the accusation of plaigarism against my previous project submssion. I am fully capable of explaining and recreating the HTML, CSS, and JavaScript used to create this and my prior project submission. 
+*/
+
+/*Global Styles*/
+body {
+    background: #88cbab;
+    margin: 0;
+    font-family: 'Didact Gothic', sans-serif;
+    color: #fff;
+}
+
+h1 {
+    font-family: 'Lobster', serif;
+    padding-top: 2em;
+}
+
+@media only screen and (min-width: 600px) {
+    h1 {
+        font-size: 3em;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    h1 {
+        font-size: 5em;
+    }
+}
+
+footer {
+    min-height: 10vh;
+}
+
+/*Body Category Styles*/
+.menu_category {
+    position: relative;
+    min-height: 80vh;
+    padding-top: 5vh;
+    margin-top: 5vh;
+}
+
+.menu_category h2 {
+    /*padding-top: 2em;*/
+    padding-left: 1.25em;
+}
+
+.menu_category p {
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+@media only screen and (min-width: 900px){
+    .menu_category p {
+        line-height: 2.5;
+    }
+}
+
+/*Active Styles*/
+.category_active{
+    background: #ddf0e7;
+    color: #1d4331;
+}
+
+.category_active h2{
+    font-family: 'Lobster';
+}
+
+/*Navigation Styles*/
+#menu_nav ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+    text-align: right;
+}
+
+#menu_nav li {
+    display: inline-block;
+}
+
+#menu_nav .menu_anchor {
+    display: block;
+    padding: 1em;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+}
+
+#menu_nav .menu_anchor:hover {
+    background: #54351f;
+    color: #fff;
+}
+
+.nav_header {
+    background: #cc9874;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 5;
+}
