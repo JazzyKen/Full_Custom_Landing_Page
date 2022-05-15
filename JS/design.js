@@ -18,6 +18,7 @@ const menuNav = document.getElementById('menu_nav');
 */ 
 function isInViewport(element) {
     let rect = element.getBoundingClientRect();
+
     return (
         rect.top >= 0 &&
         rect.left >= 0 &&
@@ -55,6 +56,22 @@ function smoothScroll() {
 }
 
 /**
+ * @description - adds a click event listener to each navigation anchor and adds the active styling to the selected anchor after removing the active styling from any previously active anchors
+*/
+function highlightNav() {
+    let anchors = document.getElementsByClassName('menu_anchor');
+
+    for (let anchor of anchors) {
+        anchor.addEventListener('click', function() {
+            for (let anchor of anchors) {
+                anchor.classList.remove('anchor_active');
+                this.classList.add('anchor_active');
+            }
+        })
+    }
+}
+
+/**
  * @description - determines if each category element is inside the viewport based on the return value of the isInViewport function and applies or removes the active styles 
 */
 function applyActiveClass() {
@@ -71,6 +88,6 @@ function applyActiveClass() {
  * @description - Sequence of Event Listeners. Builds the nav first, then applys the smooth scroll to the nav buttons, then begins checking sections to add and remove the active styles
 */
 document.body.onload = buildNav();
-menuNav.onload = smoothScroll();
+menuNav.onload = smoothScroll(); highlightNav();
 window.onscroll = applyActiveClass();
 
