@@ -93,6 +93,11 @@ footer {
     color: #fff;
 }
 
+#menu_nav .anchor_active {
+    background: #54351f;
+    color: #fff;
+}
+
 .nav_header {
     background: #cc9874;
     position: fixed;
